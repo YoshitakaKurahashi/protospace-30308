@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     else
       @prototype = @comment.prototype
       @user = User.find(@prototype.user_id)
+      @comments = @prototype.comments
       render "prototypes/show"
     end
   end
